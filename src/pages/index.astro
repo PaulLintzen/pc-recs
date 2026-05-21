@@ -1,17 +1,55 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout title="Home">
+  <section class="page-hero">
+    <p class="section-label">Plausible PC Picks</p>
+    <h1>Find your<br />perfect build.</h1>
+    <p>Curated hardware recommendations. Personal computers across every budget.</p>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="page-content">
+    <div class="card-grid">
+
+      <a href="/laptop" class="card">
+        <div class="card-accent" style="background: var(--accent-laptop);"></div>
+        <div class="card-icon">💻</div>
+        <div class="card-title">Laptops</div>
+        <p class="card-desc">Portability first.</p>
+        <span class="card-tag">All budgets</span>
+      </a>
+
+      <a href="/budget" class="card">
+        <div class="card-accent" style="background: var(--accent-budget);"></div>
+        <div class="card-icon">👾</div>
+        <div class="card-title">Budget Desktop</div>
+        <p class="card-desc">Around $500. Basic 1080p gaming and everyday performance without breaking the bank.</p>
+        <span class="card-tag">~$500</span>
+      </a>
+
+      <a href="/mid" class="card">
+        <div class="card-accent" style="background: var(--accent-mid);"></div>
+        <div class="card-icon">🔉</div>
+        <div class="card-title">Mid-Range Desktop</div>
+        <p class="card-desc">Around $1,000. Solid 1440p performance and room to upgrade. A great entry point.</p>
+        <span class="card-tag">~$1,000</span>
+      </a>
+
+      <a href="/high" class="card">
+        <div class="card-accent" style="background: var(--accent-high);"></div>
+        <div class="card-icon">💵</div>
+        <div class="card-title">High-End Desktop</div>
+        <p class="card-desc">Around $1,500. The sweet spot, great for high end 1440p gaming.</p>
+        <span class="card-tag">~$1,500</span>
+      </a>
+	  {/* <a href="/extreme" class="card">
+        <div class="card-accent" style="background: var(--accent-extreme);"></div>
+        <div class="card-icon">💸</div>
+        <div class="card-title">Maxed Out Desktop</div>
+        <p class="card-desc">$2000+. Maxed out 4k gaming.</p>
+        <span class="card-tag">$2,000+</span>
+      </a> */}
+
+    </div>
+  </section>
+</BaseLayout>

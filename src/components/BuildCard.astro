@@ -1,0 +1,42 @@
+---
+import type { Build } from '../data/builds';
+
+export interface Props {
+  build: Build;
+}
+
+const { build } = Astro.props;
+
+const accentVar = {
+  budget: '--accent-budget',
+  mid: '--accent-mid',
+  high: '--accent-high',
+}[build.tier];
+
+const partLabels: Record<string, string> = {
+  cpu: 'CPU', gpu: 'GPU', motherboard: 'Motherboard',
+  ram: 'RAM', storage: 'Storage', psu: 'PSU',
+  case: 'Case', cooler: 'Cooler',
+};
+---
+
+<div class="build-card">
+  <div class="build-card-accent" style={`background: var(${accentVar})`}></div>
+  <div class="build-card-header">
+    <div>
+      <h3 class="build-card-title">{build.title}</h3>
+      <p class="build-card-desc">{build.description}</p>
+    </div>
+    <span class="build-card-price">${build.totalPrice}</span>
+  </div>
+
+  <div class="parts-list">
+    {Object.entries(build.parts).map(([key, part]) => part && (
+      <a href={part.url} target="_blank" rel="noopener noreferrer" class="part-row">
+        <span class="part-label">{partLabels[key]}</span>
+        <span class="part-name">{part.name}</span>
+        <span class="part-price">${part.price}</span>
+      </a>
+    ))}
+  </div>
+</div>
