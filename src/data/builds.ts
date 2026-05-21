@@ -81,7 +81,7 @@ export const builds: Build[] = [
     url: "https://pcpartpicker.com/list/Y4pwC8",
     parts: {
       cpu: { name: "AMD Ryzen 5 7600X", price: 242 },
-      cooler: { name: "Razer Hanbo Chrome 240mm AIO", price: 60 },
+      cooler: { name: "Razer Hanbo Chroma 240mm AIO", price: 60 },
       motherboard: { name: "MSI MPG B650I Edge WiFi", price: 132 },
       ram: { name: "G.Skill Flare X5 32GB DDR5-5600 CL30", price: 105  },
       storage: { name: "Samsung 990 Pro 2TB NVMe M.2 SSD", price: 144 },
