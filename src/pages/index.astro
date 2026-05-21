@@ -6,9 +6,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="section-label">Plausible PC Picks</p>
     <h1>Find your<br />perfect build.</h1>
     <p>Curated hardware recommendations. Personal computers across every budget.</p>
+	<p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+    Disclaimer: These are my personal recommendations and in order to make these generally applicable I will not be considering used hardware. If the lowest tier here is outside your budget, you can find some great deals on used hardware instead. Just do some research so you know what to look for and get your money's worth.
+    </p>
   </section>
 
   <section class="page-content">
+  <p class="section-label">Builds</p>
     <div class="card-grid">
 
       <a href="/laptop" class="card">
@@ -23,24 +27,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card-accent" style="background: var(--accent-budget);"></div>
         <div class="card-icon">👾</div>
         <div class="card-title">Budget Desktop</div>
-        <p class="card-desc">Around $500. Basic 1080p gaming and everyday performance without breaking the bank.</p>
-        <span class="card-tag">~$500</span>
+        <p class="card-desc">Around $650. Basic 1080p gaming and everyday performance without breaking the bank.</p>
+        <span class="card-tag">~$650</span>
       </a>
 
       <a href="/mid" class="card">
         <div class="card-accent" style="background: var(--accent-mid);"></div>
         <div class="card-icon">🔉</div>
         <div class="card-title">Mid-Range Desktop</div>
-        <p class="card-desc">Around $1,000. Solid 1440p performance and room to upgrade. A great entry point.</p>
-        <span class="card-tag">~$1,000</span>
+        <p class="card-desc">Around $1,300. Solid 1440p performance and room to upgrade.</p>
+        <span class="card-tag">~$1,300</span>
       </a>
 
       <a href="/high" class="card">
         <div class="card-accent" style="background: var(--accent-high);"></div>
         <div class="card-icon">💵</div>
         <div class="card-title">High-End Desktop</div>
-        <p class="card-desc">Around $1,500. The sweet spot, great for high end 1440p gaming.</p>
-        <span class="card-tag">~$1,500</span>
+        <p class="card-desc">Around $1,800. Great for high end 1440p gaming and smooth 4K.</p>
+        <span class="card-tag">~$1,800</span>
       </a>
 	  {/* <a href="/extreme" class="card">
         <div class="card-accent" style="background: var(--accent-extreme);"></div>
@@ -49,6 +53,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="card-desc">$2000+. Maxed out 4k gaming.</p>
         <span class="card-tag">$2,000+</span>
       </a> */}
+
+    </div>
+  </section>
+
+
+  <section class="page-content" style="padding-top: 0;">
+    <p class="section-label">Peripherals</p>
+    <div class="card-grid">
+
+      <a href="/peripherals/monitors" class="card">
+        <div class="card-accent" style="background: var(--accent-mid);"></div>
+        <div class="card-icon">🖥️</div>
+        <div class="card-title">Monitors</div>
+        <p class="card-desc">1080p, 1440p, and 4K picks across every budget.</p>
+        <span class="card-tag">Displays</span>
+      </a>
+
+      <a href="/peripherals/keyboards" class="card">
+        <div class="card-accent" style="background: var(--accent-budget);"></div>
+        <div class="card-icon">⌨️</div>
+        <div class="card-title">Keyboards</div>
+        <p class="card-desc">My picks and recommendations for finding a good keyboard.</p>
+        <span class="card-tag">Input</span>
+      </a>
+
+      <a href="/peripherals/mice" class="card">
+        <div class="card-accent" style="background: var(--accent-laptop);"></div>
+        <div class="card-icon">🖱️</div>
+        <div class="card-title">Mice</div>
+        <p class="card-desc">My picks and recommendations for finding a the right mouse for you.</p>
+        <span class="card-tag">Input</span>
+      </a>
+
+      <a href="/peripherals/headsets" class="card">
+        <div class="card-accent" style="background: var(--accent-high);"></div>
+        <div class="card-icon">🎧</div>
+        <div class="card-title">Headsets</div>
+        <p class="card-desc">My picks for gaming headsets from basic to audiophile.</p>
+        <span class="card-tag">Audio</span>
+      </a>
 
     </div>
   </section>

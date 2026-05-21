@@ -1,20 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BuildCard from '../components/BuildCard.astro';
+import { builds } from '../data/builds.ts';
+
+const budgetBuilds = builds.filter(b => b.tier === 'high');
 ---
-<BaseLayout title="High-End Desktop (~$1,500)" description="Best PC builds around $1,500 for maxed-out 1440p or 4K gaming.">
+<BaseLayout title="High-End Desktop" description="Best PC builds around $1,750 for maxed-out 1440p or 4K gaming.">
   <section class="page-hero">
     <a href="/" class="back-link">← Home</a>
-    <p class="section-label" style="color: var(--accent-high);">High-End · ~$1,500</p>
+    <p class="section-label" style="color: var(--accent-high);">High-End · $1,800+</p>
     <h1>High-end<br />desktop.</h1>
-    <p>No compromises. Maxed-out 1440p or smooth 4K — these builds handle anything you throw at them.</p>
+    <p>Balanced build with top-tier performance. Maxed-out 1440p or smooth 4K. Not overkill but enough to run everything well today and for years to come.</p>
   </section>
 
   <section class="page-content">
-    <div class="section-label" style="margin-bottom: 0.5rem;">Recommended builds</div>
-    <p class="section-subtitle">Builds coming soon — check back shortly.</p>
-
-    <div class="build-placeholder">
-      🔧 Build recommendations will live here. Each card will include a full parts list, where to buy, and expected performance.
-    </div>
+    {budgetBuilds.map(build => (
+      <BuildCard build={build} />
+    ))}
   </section>
 </BaseLayout>

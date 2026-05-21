@@ -17,6 +17,7 @@
   --accent-mid: #60a5fa;
   --accent-high: #f59e0b;
   --accent-extreme: #ff2c2c;
+  --accent-personal: #003B46;
   --accent-laptop: #c084fc;
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -349,7 +350,6 @@ body {
 }
 
 .part-row:last-child { border-bottom: none; }
-.part-row:hover { background: var(--bg-card-hover); }
 
 .part-label {
   color: var(--text-muted);
@@ -364,4 +364,21 @@ body {
   color: var(--text-primary);
   font-weight: 500;
   text-align: right;
+}
+
+.build-card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.build-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.build-link:hover {
+  color: var(--text-primary);
 }

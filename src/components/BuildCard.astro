@@ -11,12 +11,13 @@ const accentVar = {
   budget: '--accent-budget',
   mid: '--accent-mid',
   high: '--accent-high',
+  personal: '--accent-personal',
 }[build.tier];
 
 const partLabels: Record<string, string> = {
-  cpu: 'CPU', gpu: 'GPU', motherboard: 'Motherboard',
+  cpu: 'CPU', cooler: "CPU Coooler", gpu: 'GPU', motherboard: 'Motherboard',
   ram: 'RAM', storage: 'Storage', psu: 'PSU',
-  case: 'Case', cooler: 'Cooler',
+  case: 'Case',
 };
 ---
 
@@ -30,13 +31,19 @@ const partLabels: Record<string, string> = {
     <span class="build-card-price">${build.totalPrice}</span>
   </div>
 
-  <div class="parts-list">
+    <div class="parts-list">
     {Object.entries(build.parts).map(([key, part]) => part && (
-      <a href={part.url} target="_blank" rel="noopener noreferrer" class="part-row">
+        <div class="part-row">
         <span class="part-label">{partLabels[key]}</span>
         <span class="part-name">{part.name}</span>
         <span class="part-price">${part.price}</span>
-      </a>
+        </div>
     ))}
-  </div>
+    </div>
+
+    <div class="build-card-footer">
+    <a href={build.url} target="_blank" rel="noopener noreferrer" class="build-link">
+        View full build on PCPartPicker
+    </a>
+    </div>
 </div>
