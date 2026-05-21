@@ -23,7 +23,7 @@
   --font-body: 'DM Sans', sans-serif;
   --radius-card: 16px;
   --radius-sm: 8px;
-  --max-w: 1100px;
+  --max-w: 1600px;
 }
 
 html { scroll-behavior: smooth; }
@@ -100,7 +100,7 @@ body {
 .page-hero {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 5rem 2rem 3rem;
+  padding: 1.5rem 2rem 3rem;
 }
 
 .page-hero h1 {
@@ -115,13 +115,13 @@ body {
 .page-hero p {
   color: var(--text-secondary);
   font-size: 1.1rem;
-  max-width: 520px;
+  max-width: 750px;
 }
 
 .page-content {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 2rem 5rem;
+  padding: 0 2rem 3rem;
 }
 
 /* ── Cards ── */
@@ -277,7 +277,7 @@ body {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.85rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   transition: color 0.2s;
 }
 
@@ -381,4 +381,19 @@ body {
 
 .build-link:hover {
   color: var(--text-primary);
+}
+
+.build-group {
+  margin-bottom: 3rem;
+}
+
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .build-grid { grid-template-columns: 1fr; }
 }

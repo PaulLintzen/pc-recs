@@ -8,6 +8,7 @@ export type Build = {
   description: string;
   totalPrice: number;
   tier: 'budget' | 'mid' | 'high' | 'personal';
+  variant: 'standard' | 'microcenter' | 'nvidia';
   url: string;
   parts: {
     cpu: Part;
@@ -22,11 +23,13 @@ export type Build = {
 };
 
 export const builds: Build[] = [
+  // STARTER BUILDS
   {
     title: "The 1080p Starter",
     description: "Best bang for buck at $650. Handles 1080p gaming at high settings.",
     totalPrice: 650,
     tier: "budget",
+    variant: "microcenter",
     url: "https://pcpartpicker.com/list/GhJfvR",
     parts: {
       cpu: { name: "AMD Ryzen 5 5500", price: 27 },
@@ -39,10 +42,13 @@ export const builds: Build[] = [
       psu: { name: "Corsair CX750M 750W 80+ Bronze", price: 60 },
     },
   },
+
+  // MIDRANGE BUILDS
   {
     title: "The Value King",
     description: "A sweet spot with good performance now and an upgrade path for the future.",
     totalPrice: 1277,
+    variant: "microcenter",
     tier: "mid",
     url: "https://pcpartpicker.com/list/c6ZZw3",
     parts: {
@@ -57,9 +63,48 @@ export const builds: Build[] = [
     },
   },
   {
+    title: "The Value King",
+    description: "A sweet spot with good performance now and an upgrade path for the future.",
+    totalPrice: 1277,
+    variant: "nvidia",
+    tier: "mid",
+    url: "https://pcpartpicker.com/list/c6ZZw3",
+    parts: {
+      cpu: { name: "AMD Ryzen 7 7600X3D", price: 34 },
+      cooler: { name: "Thermalright Phantom Spirit", price: 36 },
+      motherboard: { name: "Asus TUF Gaming B650-E WiFi", price: 110 },
+      ram: { name: "G.Skill Flare X5 16GB DDR5-6000 CL36", price: 206 },
+      storage: { name: "Silicon Power UD90 1TB NVMe M.2 SSD", price: 153 },
+      gpu: { name: "AMD Radeon RX 9070", price: 595 },
+      case: { name: "Lian Li Lancool 207", price: 73 },
+      psu: { name: "MSI MAG A750BN 750W 80+ Gold", price: 70 },
+    },
+  },
+    {
+    title: "The Value King",
+    description: "A sweet spot with good performance now and an upgrade path for the future.",
+    totalPrice: 1277,
+    variant: "standard",
+    tier: "mid",
+    url: "https://pcpartpicker.com/list/c6ZZw3",
+    parts: {
+      cpu: { name: "AMD Ryzen 7 7600X3D", price: 34 },
+      cooler: { name: "Thermalright Phantom Spirit", price: 36 },
+      motherboard: { name: "Asus TUF Gaming B650-E WiFi", price: 110 },
+      ram: { name: "G.Skill Flare X5 16GB DDR5-6000 CL36", price: 206 },
+      storage: { name: "Silicon Power UD90 1TB NVMe M.2 SSD", price: 153 },
+      gpu: { name: "AMD Radeon RX 9070", price: 595 },
+      case: { name: "Lian Li Lancool 207", price: 73 },
+      psu: { name: "MSI MAG A750BN 750W 80+ Gold", price: 70 },
+    },
+  },
+
+  // HIGH END BUILDS
+  {
     title: "The 1440p Beast",
     description: "Great value at this price and will run anything you throw at it.",
     totalPrice: 1843,
+    variant: "nvidia",
     tier: "high",
     url: "https://pcpartpicker.com/list/yrQDqd",
     parts: {
@@ -78,6 +123,7 @@ export const builds: Build[] = [
     description: "What I'm currently running. Listed prices are purchase price not current price.",
     totalPrice: 1555,
     tier: "personal",
+    variant: "standard",
     url: "https://pcpartpicker.com/list/Y4pwC8",
     parts: {
       cpu: { name: "AMD Ryzen 5 7600X", price: 242 },
