@@ -3,5 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://paullintzen.github.io/rc-recs'
+    site: 'https://paullintzen.github.io',
+    base: '/pc-recs',
 });
