@@ -3,19 +3,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BuildCard from '../components/BuildCard.astro';
 import { builds } from '../data/builds.ts';
 
-const budgetBuilds = builds.filter(b => b.tier === 'high');
+const tierBuilds = builds.filter(b => b.tier === 'high');
+
+const standard = tierBuilds.filter(b => b.variant === 'standard');
+const microcenter = tierBuilds.filter(b => b.variant === 'microcenter');
+const nvidia = tierBuilds.filter(b => b.variant === 'nvidia');
 ---
 <BaseLayout title="High-End Desktop" description="Best PC builds around $1,750 for maxed-out 1440p or 4K gaming.">
-  <section class="page-hero">
+  <section class="page-hero wide">
     <a href="/pc-recs" class="back-link">← Home</a>
     <p class="section-label" style="color: var(--accent-high);">High-End · $1,800+</p>
     <h1>High-end<br />desktop</h1>
     <p>Balanced build with top-tier performance. Maxed-out 1440p or smooth 4K. Not overkill but enough to run everything well today and for years to come.</p>
   </section>
 
-  <section class="page-content">
-    {budgetBuilds.map(build => (
-      <BuildCard build={build} />
-    ))}
-  </section>
+  <section class="page-content wide">
+  <div class="build-grid">
+    <div class="build-group">
+      <p class="section-label">Microcenter Bundle</p>
+      {microcenter.map(build => <BuildCard build={build} />)}
+    </div>
+
+    <div class="build-group">
+      <p class="section-label">Standard</p>
+      {standard.map(build => <BuildCard build={build} />)}
+    </div>
+
+    <div class="build-group">
+      <p class="section-label">Nvidia Option</p>
+      {nvidia.map(build => <BuildCard build={build} />)}
+    </div>
+
+  </div>
+</section>
 </BaseLayout>
