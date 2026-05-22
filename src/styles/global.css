@@ -369,6 +369,9 @@ body {
 .build-card-footer {
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .build-link {
@@ -396,4 +399,21 @@ body {
 
 @media (max-width: 900px) {
   .build-grid { grid-template-columns: 1fr; }
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.last-updated {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.build-card-price {
+  font-family: var(--font-body);
 }

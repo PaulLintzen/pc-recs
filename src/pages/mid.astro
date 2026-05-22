@@ -13,28 +13,24 @@ const nvidia = tierBuilds.filter(b => b.variant === 'nvidia');
   <section class="page-hero">
     <a href="/pc-recs" class="back-link">← Home</a>
     <p class="section-label" style="color: var(--accent-mid);">Mid-Range · $1,300</p>
-    <h1>Mid-range<br />desktop.</h1>
-    <p>The sweet spot for most people. Strong 1440p gaming, fast productivity, and plenty of headroom to upgrade over time.</p>
+    <h1>Mid-range<br />desktop</h1>
+    <p>The sweet spot for most people. Strong 1440p gaming, fast productivity, and plenty of headroom to upgrade over time. If you live near a microcenter, the CPU/RAM/MOBO bundles are great value.</p>
   </section>
 
 <section class="page-content">
   <div class="build-grid">
-
-    <div class="build-group">
-      <p class="section-label">Standard</p>
-      <p class="section-subtitle">Best value build available anywhere online.</p>
-      {standard.map(build => <BuildCard build={build} />)}
-    </div>
-
     <div class="build-group">
       <p class="section-label">Microcenter Bundle</p>
-      <p class="section-subtitle">If you have a Microcenter nearby, CPU+motherboard bundles can save you $50–100.</p>
       {microcenter.map(build => <BuildCard build={build} />)}
     </div>
 
     <div class="build-group">
+      <p class="section-label">Standard</p>
+      {standard.map(build => <BuildCard build={build} />)}
+    </div>
+
+    <div class="build-group">
       <p class="section-label">Nvidia Option</p>
-      <p class="section-subtitle">Worse value than AMD at this price point, but worth it if you need CUDA, DLSS, or a specific use case.</p>
       {nvidia.map(build => <BuildCard build={build} />)}
     </div>
 

@@ -6,6 +6,12 @@ export interface Props {
   description?: string;
 }
 const { title, description = "PC hardware recommendations for every budget." } = Astro.props;
+
+const lastUpdated = new Date().toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric'
+});
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +46,7 @@ const { title, description = "PC hardware recommendations for every budget." } =
 
     <footer class="site-footer">
       <p>Plausible PC Picks — up to date hardware recommendations from Paul himself.</p>
+      <span class="last-updated">Last updated {lastUpdated}</span>
     </footer>
   </body>
 </html>

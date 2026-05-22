@@ -10,6 +10,7 @@ export type Build = {
   tier: 'budget' | 'mid' | 'high' | 'personal';
   variant: 'standard' | 'microcenter' | 'nvidia';
   url: string;
+  recommended?: boolean;
   parts: {
     cpu: Part;
     cooler: Part;
@@ -46,10 +47,11 @@ export const builds: Build[] = [
   // MIDRANGE BUILDS
   {
     title: "The Value King",
-    description: "A sweet spot with good performance now and an upgrade path for the future.",
+    description: "If you live near a microcenter this is incredible value compared to other options.",
     totalPrice: 1277,
     variant: "microcenter",
     tier: "mid",
+    recommended: true,
     url: "https://pcpartpicker.com/list/c6ZZw3",
     parts: {
       cpu: { name: "AMD Ryzen 7 7600X3D", price: 34 },
@@ -63,8 +65,8 @@ export const builds: Build[] = [
     },
   },
   {
-    title: "The Value King",
-    description: "A sweet spot with good performance now and an upgrade path for the future.",
+    title: "Nvidia or Bust",
+    description: "Worse value than AMD at this price point, but worth it if you need CUDA, DLSS, or a specific use case.",
     totalPrice: 1277,
     variant: "nvidia",
     tier: "mid",
@@ -81,7 +83,7 @@ export const builds: Build[] = [
     },
   },
     {
-    title: "The Value King",
+    title: "The Online Value King",
     description: "A sweet spot with good performance now and an upgrade path for the future.",
     totalPrice: 1277,
     variant: "standard",
