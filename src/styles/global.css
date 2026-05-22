@@ -23,7 +23,7 @@
   --font-body: 'DM Sans', sans-serif;
   --radius-card: 16px;
   --radius-sm: 8px;
-  --max-w: 1600px;
+  --max-w: 1200px;
 }
 
 html { scroll-behavior: smooth; }
@@ -102,6 +102,9 @@ body {
   margin: 0 auto;
   padding: 1.5rem 2rem 3rem;
 }
+.page-hero.wide {
+  max-width: 1600px;
+}
 
 .page-hero h1 {
   font-family: var(--font-display);
@@ -122,6 +125,9 @@ body {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 2rem 3rem;
+}
+.page-content.wide {
+  max-width: 1600px;
 }
 
 /* ── Cards ── */
